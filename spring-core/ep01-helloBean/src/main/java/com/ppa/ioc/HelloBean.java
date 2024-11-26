@@ -1,8 +1,8 @@
 package com.ppa.ioc;
 
-import org.springframework.stereotype.Component;
+import com.ppa.ioc.anno.MyAnno;
 
-@Component
+@MyAnno
 public class HelloBean {
 	
 	public void hello() {
