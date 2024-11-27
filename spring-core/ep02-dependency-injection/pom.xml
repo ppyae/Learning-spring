@@ -5,13 +5,5 @@
     <artifactId>spring-core</artifactId>
     <version>1.0</version>
   </parent>
-  
-  <dependencies>
-  	<dependency>
-  		<groupId>javax.annotation</groupId>
-  		<artifactId>jsr250-api</artifactId>
-  		<version>1.0</version>
-  	</dependency>
-  </dependencies>
-  <artifactId>ep01-helloBean</artifactId>
+  <artifactId>ep02-dependency-injection</artifactId>
 </project>
