@@ -41,5 +41,7 @@
 	<modules>
 		<module>ep01-helloBean</module>
 		<module>ep02-dependency-injection</module>
+		<module>ep03-getting-start-aop</module>
+		<module>ep04-pointcut</module>
 	</modules>
 </project>
