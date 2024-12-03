@@ -17,12 +17,12 @@
 		<property name="user" value="${db.user}"></property>
 		<property name="password" value="${db.password}"></property>
 	</bean>
-	<bean name="template"
+	<!-- <bean name="template"
 		class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg ref="dataSource"></constructor-arg>
-	</bean>
+	</bean> -->
 
-	<bean class="com.ppa.jdbc.dao.MemberDao" autowire="constructor"></bean>
+	<!-- <bean class="com.ppa.jdbc.dao.MemberDao" autowire="constructor"></bean> -->
 
 
 </beans>
