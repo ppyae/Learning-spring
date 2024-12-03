@@ -14,7 +14,7 @@ import com.jolbox.bonecp.BoneCPDataSource;
 
 @Configuration
 @ComponentScan("com.ppa.jdbc.dao")
-@PropertySource(value = "/database.properties")
+@PropertySource(value  = "/database.properties,/sql.properties")
 public class AppConfig {
 	
 	@Value("${db.url}")
