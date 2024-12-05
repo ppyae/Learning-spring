@@ -11,7 +11,23 @@
 	<h1>Hello Jsp</h1>
 	
 	<ul>
-		<li><a href="hello">Hello Servlet</a>
+		<li><a href="hello?name=Aung&phone=93839">Hello Servlet</a>
 	</ul>
+	<form method="get" action="hello">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" placeholder="Enter Name"> </td>
+			</tr>
+			<tr>
+				<td>Phone</td>
+				<td><input type="text" name="phone" placeholder="Enter Phone"> </td>
+			</tr>
+			<tr>
+				<td></td>
+				<td> <button type="submit" >Send</button> </td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
