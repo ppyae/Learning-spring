@@ -13,7 +13,7 @@
 	<ul>
 		<li><a href="hello?name=Aung&phone=93839">Hello Servlet</a>
 	</ul>
-	<form method="get" action="hello">
+	<form method="post" action="hello">
 		<table>
 			<tr>
 				<td>Name</td>
