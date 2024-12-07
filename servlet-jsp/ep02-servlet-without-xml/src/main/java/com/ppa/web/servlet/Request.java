@@ -8,12 +8,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(
-		name = "helloServlet",
-		urlPatterns = "/servlet",
-		loadOnStartup = 1
-		)
-public class Hello extends HttpServlet {
+@WebServlet(urlPatterns = "/request")
+public class Request extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -24,10 +20,8 @@ public class Hello extends HttpServlet {
 		req.setAttribute("servletPath", req.getServletPath());
 		req.setAttribute("severPort", req.getServerPort());
 		
-		var dispatcher = req.getRequestDispatcher("include.jsp");
-		dispatcher.include(req, resp);
-		
-		
+		var dispatcher = req.getRequestDispatcher("/request.jsp");
+		dispatcher.forward(req, resp);
 	}
 
 }

@@ -14,7 +14,8 @@
 	
 		<ul>
 			<li>
-				<a href="servlet">Servlet</a>
+				<a href="servlet" class="btn btn-primary">Include</a>
+				<a href="request" class="btn btn-primary">Request</a>
 			</li>
 		</ul>
 	</div>

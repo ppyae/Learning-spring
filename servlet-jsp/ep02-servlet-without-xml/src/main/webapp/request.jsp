@@ -10,7 +10,7 @@
 <body>
 <body>
 	<div class="container mt-3">
-		<h1>Hello from include Dispatcher</h1>
+		<h1>Hello from request Dispatcher</h1>
 		
 		<table class="table table-striped w-50">
 			<tr>
