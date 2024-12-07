@@ -24,18 +24,20 @@ public class Hello extends HttpServlet {
 				<html>
 				<head>
 				<meta charset="UTF-8">
-				<title>JSp</title>
+				<title>JSp</title>""");
+		var dispatcher = req.getRequestDispatcher("bootstrap.jsp");
+		dispatcher.include(req, resp);
+		
+		resp.getWriter().append("""
 				</head>
 				<body>
-				
-					<h1>Hello Servlet Anno Style</h1>
-					
-					<ul>
-						<li>
-						<a href="./"> Home</a>
-						</li>
-					</ul>
+					<div class="container mt-3">
+						<h1>Hello Jsp without xml</h1>
+						
+							<a href="./" class="btn btn-primary">Home</a>
+					</div>
 				</body>
+				</html>
 				""");
 	}
 
