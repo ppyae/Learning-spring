@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.ppa.jpa.entity.Company;
 import com.ppa.jpa.entity.Member;
 
 import jakarta.persistence.EntityManagerFactory;
@@ -35,7 +36,14 @@ public class JpaTest {
 		
 		var em = emf.createEntityManager();
 		em.getTransaction().begin();
+		
 		em.persist(member);
+		System.out.println("Member id is %s".formatted(member.getId()));
+		
+		var company = new Company();
+		company.setName("Phyo Coltd");
+		em.persist(company);
+		System.out.println("Company id is %s".formatted(company.getId()));
 		em.getTransaction().commit();
 	}
 }

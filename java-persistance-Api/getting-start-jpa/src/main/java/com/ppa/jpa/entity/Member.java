@@ -1,5 +1,7 @@
 package com.ppa.jpa.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.SecondaryTable;
 import jakarta.persistence.Table;
+import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
 import lombok.Data;
 
@@ -16,10 +19,13 @@ import lombok.Data;
 @Table(name = "member_tb", uniqueConstraints = @UniqueConstraint(columnNames = {
 		"email" }))
 @SecondaryTable(name = "login_info", indexes = @Index(columnList = "role"))
-public class Member {
+public class Member implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(generator = "member_seq")
+	@TableGenerator(name = "member_seq",allocationSize = 1,initialValue = 200)
 	private int id;
 	private String name;
 
