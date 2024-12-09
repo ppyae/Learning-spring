@@ -4,22 +4,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<jsp:include page="/bootstrap.jsp"></jsp:include>
+<title>Servlet Without Web XML</title>
+
+<jsp:include page="bootstrap.jsp"></jsp:include>
+
 </head>
 <body>
 
-	<div class="container mt-3">
-		<h1>Hello Jsp without xml</h1>
-	
+	<div class="container mt-4">
+		<h1>Servlet Without Web XML</h1>
+		
 		<ul>
 			<li>
-				<a href="servlet" class="btn btn-primary">Include</a>
-				<a href="request" class="btn btn-primary">Request</a>
+				<a href="${pageContext.request.contextPath}/hello">Hello Servlet</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/requestInfo">Request Information</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/registration.jsp">Student Registration</a>
 			</li>
 		</ul>
 	</div>
-	
-	
+
 </body>
 </html>

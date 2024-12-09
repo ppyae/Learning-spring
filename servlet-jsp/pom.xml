@@ -45,5 +45,6 @@
 	<modules>
 		<module>ep01-servlet-with-xml</module>
 		<module>ep02-servlet-without-xml</module>
+		<module>ep04-using-scope</module>
 	</modules>
 </project>

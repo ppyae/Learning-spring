@@ -8,19 +8,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/request")
-public class Request extends HttpServlet {
+@WebServlet(urlPatterns = "/requestInfo")
+public class RequestInfoServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		req.setAttribute("contextPath",req.getContextPath());
+		req.setAttribute("contextPath", req.getContextPath());
 		req.setAttribute("servletPath", req.getServletPath());
-		req.setAttribute("severPort", req.getServerPort());
+		req.setAttribute("serverPort", req.getServerPort());
 		
-		var dispatcher = req.getRequestDispatcher("/request.jsp");
+		var dispatcher = getServletContext().getRequestDispatcher("/request-info.jsp");
 		dispatcher.forward(req, resp);
 	}
 
