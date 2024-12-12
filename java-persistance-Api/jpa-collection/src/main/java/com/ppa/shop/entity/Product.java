@@ -2,6 +2,7 @@ package com.ppa.shop.entity;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.ElementCollection;
@@ -13,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.MapKeyEnumerated;
+import jakarta.persistence.OrderBy;
 import lombok.Data;
 
 @Entity
@@ -30,7 +32,11 @@ public class Product {
 	@MapKeyEnumerated(EnumType.STRING)
 	private Map<PriceType, Integer> price;
 	@ElementCollection
+	@OrderBy("tags desc")
 	private List<String> tags;
+	@ElementCollection
+	@CollectionTable(name = "product_feature")
+	private Set<Feature> feature;
 	
 	private enum PriceType{
 		Retail, Whole_Sale,Special
