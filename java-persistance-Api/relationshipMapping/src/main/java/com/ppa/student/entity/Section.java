@@ -2,12 +2,16 @@ package com.ppa.student.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -30,5 +34,7 @@ public class Section implements Serializable {
 	@Column(name = "end_date")
 	private LocalDate endDate;
 	private Double duration;
-
+	@ManyToMany
+	@JoinTable(name = "course_teacher",joinColumns = @JoinColumn(name = "class_id"))
+	private List<Account> teachers;
 }
