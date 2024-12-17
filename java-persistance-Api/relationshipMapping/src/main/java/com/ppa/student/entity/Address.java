@@ -30,6 +30,6 @@ public class Address implements Serializable {
 	@OneToOne(optional = false)
 	@PrimaryKeyJoinColumn
 	@MapsId
-	private Account account;
+	private Student student;
 
 }
