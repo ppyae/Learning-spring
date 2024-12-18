@@ -18,6 +18,16 @@ public class Student extends Account {
 
 	private static final long serialVersionUID = 1L;
 	
+	public Student() {
+		setRole(Role.Student);
+	}
+
+	public Student(String name, String loginId, String password) {
+		super(name, loginId, password);
+		setRole(Role.Student);
+	}
+
+
 	@ManyToMany
 	private List<Section> classes;
 	

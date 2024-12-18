@@ -22,6 +22,17 @@ public abstract class Account implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	public Account() {
+	}
+	
+	public Account(String name, String loginId, String password) {
+		super();
+		this.name = name;
+		this.loginId = loginId;
+		this.password = password;
+	}
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

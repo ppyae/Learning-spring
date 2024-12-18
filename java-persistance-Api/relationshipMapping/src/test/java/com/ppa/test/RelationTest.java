@@ -3,6 +3,10 @@ package com.ppa.test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import com.ppa.student.entity.Office;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -23,12 +27,18 @@ public class RelationTest {
 		}
 	}
 	
-	@Test
-	void demo() {
-//		
-//		var em = emf.createEntityManager();
-//		em.getTransaction().begin();
-//		
+	@ParameterizedTest
+	@CsvSource({
+		"Aung Aung,aung,aung"
+	})
+	void demo(String name,String loginId,String password) {
+		
+		var em = emf.createEntityManager();
+		em.getTransaction().begin();
+		var account = new Office(name, loginId, password);
+		em.persist(account);
+		em.getTransaction().commit();
+		
 //		//create account
 //		var account = new Account();
 //		account.setLoginId("Thandar");

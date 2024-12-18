@@ -13,6 +13,18 @@ public class Office extends Account {
 
 	private static final long serialVersionUID = 1L;
 	
+	public Office() {
+		setRole(Role.Admin);
+	}
+	
+	public Office(String name, String loginId, String password) {
+		super(name, loginId, password);
+		setRole(Role.Admin);
+	}
+
+
+
+
 	private boolean admin;
 
 }
