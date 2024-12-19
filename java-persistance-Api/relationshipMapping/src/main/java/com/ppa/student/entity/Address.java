@@ -2,6 +2,10 @@ package com.ppa.student.entity;
 
 import java.io.Serializable;
 
+import com.ppa.student.entity.embeddable.Contact;
+
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -26,6 +30,13 @@ public class Address implements Serializable {
 	private String TownShip;
 	@Column(nullable = false)
 	private String Country;
+	
+	private Contact contact;
+	@AttributeOverrides({
+		@AttributeOverride(name = "email",column = @Column(name = "sec_email")),
+		@AttributeOverride(name = "phone",column = @Column(name = "sec_phone",length = 12))
+	})
+	private Contact secondaryContact;
 	
 	@OneToOne(optional = false)
 	@PrimaryKeyJoinColumn
