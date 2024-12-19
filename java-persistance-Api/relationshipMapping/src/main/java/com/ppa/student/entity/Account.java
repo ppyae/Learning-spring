@@ -1,8 +1,12 @@
 package com.ppa.student.entity;
 
+import java.awt.Color;
 import java.io.Serializable;
 
+import com.ppa.student.entity.conveter.ColorConveter;
+
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -47,8 +51,8 @@ public abstract class Account implements Serializable {
 	private String loginId;
 	@Column(nullable = false,length = 45)
 	private String password;
-	
-	
+	@Convert(converter = ColorConveter.class)
+	private Color color;
 	
 	public enum Role{
 		Admin,Teacher,Student

@@ -1,8 +1,9 @@
 package com.ppa.test;
 
+import java.awt.Color;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -36,6 +37,7 @@ public class RelationTest {
 		var em = emf.createEntityManager();
 		em.getTransaction().begin();
 		var account = new Office(name, loginId, password);
+		account.setColor(Color.CYAN);
 		em.persist(account);
 		em.getTransaction().commit();
 		
