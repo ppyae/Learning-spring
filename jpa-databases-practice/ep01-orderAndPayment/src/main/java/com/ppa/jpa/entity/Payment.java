@@ -29,6 +29,10 @@ public class Payment implements Serializable {
 	private Customer customer;
 	@ManyToOne
 	private PaymentMethod paymentMethod;
+	@ManyToOne
+	private Finance finance;
+	@ManyToOne
+	private Office office;
 	
 	
 

@@ -29,5 +29,9 @@ public class Order implements Serializable {
 	private Customer customer;
 	@OneToOne(optional = false)
 	private Payment payment;
+	@ManyToOne
+	private Finance finance;
+	@ManyToOne
+	private Office office;
 
 }
