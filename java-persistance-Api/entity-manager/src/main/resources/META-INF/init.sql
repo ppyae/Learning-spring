@@ -1,0 +1,1 @@
+insert into member(name,login_id,password) values ('Pyae Phyo','phyo','phyo');

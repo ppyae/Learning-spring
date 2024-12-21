@@ -59,5 +59,6 @@
 		<module>getting-start-jpa</module>
 		<module>jpa-collection</module>
 		<module>relationshipMapping</module>
+		<module>entity-manager</module>
 	</modules>
 </project>
