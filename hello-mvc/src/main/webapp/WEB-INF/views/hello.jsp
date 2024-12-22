@@ -4,10 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hello MVC</title>
+<title>MVC</title>
 </head>
 <body>
 
-	<h1>Hello MVC</h1>
+	<h1>Hello from Jsp</h1>
+	
+	
 </body>
 </html>
