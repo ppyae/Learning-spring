@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -17,6 +19,20 @@ public class Member implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	public Member() {
+		
+	}
+	
+	public Member(String name, String loginId, String password) {
+		super();
+		this.name = name;
+		this.loginId = loginId;
+		this.password = password;
+		this.role = Role.Member;
+	}
+
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -25,5 +41,11 @@ public class Member implements Serializable {
 	private String loginId;
 	@Column(length = 8)
 	private String password;
+	@Enumerated(EnumType.STRING)
+	private Role role;
+	
+	public enum Role{
+		Admin,Member
+	}
 
 }
