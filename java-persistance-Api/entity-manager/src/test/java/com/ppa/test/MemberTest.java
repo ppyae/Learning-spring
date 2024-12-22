@@ -1,8 +1,8 @@
 package com.ppa.test;
 
 import org.junit.jupiter.api.AfterAll;
+import static org.junit.Assert.*;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -38,8 +38,17 @@ public class MemberTest {
 		//Transient state
 		em.getTransaction().begin();
 		
+		
 		//manage state
 		em.persist(member);
+		
+		assertTrue(em.contains(member));
+		
+		//Detached state
+		em.detach(member);
+		
+		assertFalse(em.contains(member));
+				
 		member.setRole(Role.Admin);
 		
 		//sychornice to database
