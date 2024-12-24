@@ -51,7 +51,12 @@ public class MemberTest {
 				
 		member.setRole(Role.Admin);
 		
-		//sychornice to database
+		//merge state
+		member = em.merge(member);//return type of merge can reach manage state
+		
+		assertTrue(em.contains(member));
+		
+		//synchornice to database
 		em.getTransaction().commit();
 		
 	}
