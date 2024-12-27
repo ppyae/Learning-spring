@@ -1,13 +1,15 @@
 package com.ppa.test;
 
-import static org.junit.Assert.*;
-
-import org.junit.jupiter.api.AfterAll;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.hibernate.LazyInitializationException;
-
-import static org.junit.jupiter.api.Assertions.assertAll; 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
@@ -21,7 +23,6 @@ import com.ppa.em.entity.Member.Role;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.Id;
 import jakarta.persistence.Persistence;
 
 @TestMethodOrder(OrderAnnotation.class)
@@ -131,5 +132,19 @@ public class MemberTest {
 		
 		assertThrows(EntityNotFoundException.class, ()-> member.setName("Thida"));
 		assertThrows(EntityNotFoundException.class, member::getName);
+	}
+	
+	@Order(6)
+	@ParameterizedTest
+	@ValueSource(ints = 1)
+	void fetchMode(int id) {
+		
+		var em = emf.createEntityManager();
+		var member = em.find(Member.class, id);
+		
+		em.detach(member);
+		
+		//This code will work when List<> of fetch mode is lazy in Member class
+//		assertThrows(LayerInstantiationException.class, ()-> member.getTags());
 	}
 }
