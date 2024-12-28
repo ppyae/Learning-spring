@@ -1,1 +1,5 @@
-com\ppa\spring\mvc\HomeController.class
+com\ppa\spring\mvc\controller\HomeController.class
+com\ppa\spring\mvc\model\entity\Product.class
+com\ppa\spring\mvc\model\repo\CategoryRepo.class
+com\ppa\spring\mvc\model\entity\OrderItem.class
+com\ppa\spring\mvc\model\repo\ProductRepo.class

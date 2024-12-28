@@ -12,8 +12,8 @@
 	<h1>Hello form Jsp view</h1>
 	<p>${message}</p>
 	<ul>
-		<c:forEach var="item" items="${days}">
-			<li>${item}</li>
+		<c:forEach var="item" items="${products}">
+			<li>${item.name}</li>
 		</c:forEach>
 	</ul>
 </body>
