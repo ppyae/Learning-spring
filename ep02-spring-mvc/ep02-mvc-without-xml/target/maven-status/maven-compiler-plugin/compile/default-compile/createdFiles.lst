@@ -1,0 +1,8 @@
+com\ppa\mvc\model\entity\Product.class
+com\ppa\mvc\ApplicationInitilizer.class
+com\ppa\mvc\ApplicationMvcConfig.class
+com\ppa\mvc\ApplicationRootConfig.class
+com\ppa\mvc\controller\HomeController.class
+com\ppa\mvc\model\repo\ProductRepo.class
+com\ppa\mvc\model\repo\CategoryRepo.class
+com\ppa\mvc\model\entity\OrderItem.class

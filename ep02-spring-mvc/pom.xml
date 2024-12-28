@@ -66,5 +66,6 @@
 	</build>
 	<modules>
 		<module>ep01-mvc-with-xml</module>
+		<module>ep02-mvc-without-xml</module>
 	</modules>
 </project>
