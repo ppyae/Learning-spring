@@ -1,6 +1,7 @@
 package com.ppa.em.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -23,11 +24,11 @@ public class Member implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	public Member() {
-		
+		new ArrayList<>();
 	}
 	
-	public Member(String name, String loginId, String password) {
-		super();
+	public Member(String name, String loginId, String password, List<String> tags) {
+		this.tags = tags;
 		this.name = name;
 		this.loginId = loginId;
 		this.password = password;
