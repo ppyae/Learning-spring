@@ -16,7 +16,7 @@ public class MergeTest extends OperationTest {
 		var em = emf.createEntityManager();
 		em.getTransaction().begin();
 		
-		var member = new Member(name, loginId, password, null);
+		var member = new Member(name, loginId, password);
 		member = em.merge(member);
 		assertEquals(id, member.getId());
 		em.getTransaction().commit();
