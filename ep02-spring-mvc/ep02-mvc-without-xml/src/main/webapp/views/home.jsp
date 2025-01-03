@@ -18,6 +18,9 @@
 			</c:forEach>
 		</li>
 	</ul>
+	<div>
+		<a href="${pageContext.request.contextPath}/legacy">Legacy Controller</a>
+	</div>
 
 </body>
 </html>
