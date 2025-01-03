@@ -18,9 +18,15 @@
 			</c:forEach>
 		</li>
 	</ul>
-	<div>
-		<a href="${pageContext.request.contextPath}/legacy">Legacy Controller</a>
-	</div>
+	
+	<ul>
+		<li>
+			<a href="${pageContext.request.contextPath}/legacy">Legacy Controller</a>
+		</li>
+		<li>
+			<a href="${pageContext.request.contextPath}/function">Router Function</a>
+		</li>
+	</ul>
 
 </body>
 </html>
