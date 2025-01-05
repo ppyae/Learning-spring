@@ -67,6 +67,7 @@
 	<modules>
 		<module>ep01-mvc-with-xml</module>
 		<module>ep02-mvc-without-xml</module>
+		
 		<module>ep03-mvc-with-spring-boot</module>
 	</modules>
 </project>

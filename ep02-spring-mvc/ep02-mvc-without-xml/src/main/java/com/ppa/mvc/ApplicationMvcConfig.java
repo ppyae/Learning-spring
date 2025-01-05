@@ -1,15 +1,14 @@
 package com.ppa.mvc;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.MediaType;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.function.RenderingResponse;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.RouterFunctions;
 import org.springframework.web.servlet.function.ServerResponse;
@@ -36,8 +35,7 @@ public class ApplicationMvcConfig implements WebMvcConfigurer {
 	
 	@Bean
 	RouterFunction<ServerResponse> router(){
-		return RouterFunctions.route().GET("/function" , request -> ServerResponse.ok()
-				.contentType(MediaType.APPLICATION_JSON)
-				.body(List.of("Hello form Router"))).build();
+		return RouterFunctions.route().GET("/function" , request -> RenderingResponse.create("function")
+				.modelAttribute("function", "Hello from Router").build()).build();
 	}
 }
