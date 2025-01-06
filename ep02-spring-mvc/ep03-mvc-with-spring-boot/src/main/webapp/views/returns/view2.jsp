@@ -1,16 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>View</title>
-</head>
-<body>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="app" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 
-	<h1>Hello form View</h1>
-	
-	
+<app:layout>
+	<h4>Return Type for Handler Methods</h4>
 
-</body>
-</html>
+	<app:returns>
+		<h1>Returning Model and View</h1>
+		<ul>
+			<c:forEach var="item" items="${days}">
+				<li>${item}</li>
+			</c:forEach>
+
+		</ul>
+		<p>${message}</p>
+	</app:returns>
+</app:layout>

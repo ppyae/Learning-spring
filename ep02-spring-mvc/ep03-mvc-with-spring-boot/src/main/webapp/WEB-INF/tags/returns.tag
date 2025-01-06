@@ -3,18 +3,18 @@
 <div class="row">
 	<div class="col-3">
 	
-		<ul class="nav">
+		<ul class="nav flex-column">
 			<li class="nav-item">
-				<a href="" class="nav-link">String Type</a>
+				<a href="${root}/returns/handler1" class="nav-link">String Type</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Model and View</a>
+				<a href="${root}/returns/handler2" class="nav-link">Model and View</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Return Void</a>
+				<a href="${root}/returns/handler3" class="nav-link">Return Void</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Redirection</a>
+				<a href="${root}/returns/handler4" class="nav-link">Redirection</a>
 			</li>
 		</ul>
 	</div>

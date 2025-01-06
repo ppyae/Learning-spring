@@ -33,7 +33,7 @@
 	</nav>
 	
 		<!-- Content -->
-		<main>
+		<main class="container mt-3">
 			<jsp:doBody></jsp:doBody>
 		</main>
 

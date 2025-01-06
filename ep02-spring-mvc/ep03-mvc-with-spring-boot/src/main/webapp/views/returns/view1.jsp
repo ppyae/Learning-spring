@@ -6,6 +6,7 @@
 		<h4>Return Type for Handler Methods</h4>
 		
 		<app:returns>
-		
+			<h1>Returning Logical View</h1>
+			<p>${message}</p>
 		</app:returns>
 	</app:layout>
