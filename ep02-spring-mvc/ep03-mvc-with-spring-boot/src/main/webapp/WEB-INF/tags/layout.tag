@@ -26,6 +26,12 @@
 			<span class="navbar-brand">Request Handler</span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
+					<c:url var="inputs" value="/inputs">
+						<c:param name="day" value="MONDAY"></c:param>
+					</c:url>
+					<a href="${inputs}" class="nav-link">Input Value</a>
+				</li>
+				<li class="nav-item">
 					<a href="${root}/returns" class="nav-link">Return Type</a>
 				</li>
 			</ul>
