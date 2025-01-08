@@ -3,7 +3,6 @@ package com.ppa.mvc.controller;
 import java.time.DayOfWeek;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +14,8 @@ public class ReturnTypeController {
 
 	//Return String
 	@GetMapping("handler1")
-	String index(Model model) {
-		model.addAttribute("message", "Message from Model Method");
+	String index(ModelMap model) {
+		model.put("message", "Message from Model Method");
 		return "/returns/view1";
 	}
 	
