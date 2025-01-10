@@ -50,5 +50,6 @@
 	</build>
 	<modules>
 		<module>ep01-orderAndPayment</module>
+		<module>ep02-hotel-management</module>
 	</modules>
 </project>
