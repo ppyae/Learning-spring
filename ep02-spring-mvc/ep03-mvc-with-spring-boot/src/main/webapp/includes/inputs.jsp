@@ -12,7 +12,7 @@
 		<a href="${inputs}" class="nav-link">Query Param</a>
 	</li>
 	<li class="nav-item">
-		<a href="" class="nav-link">Get Form Param</a>
+		<a href="${root}/inputs/javaBean" class="nav-link">Get Form Param</a>
 	</li>
 	<li class="nav-item">
 		<a href="" class="nav-link">Post Form Param</a>

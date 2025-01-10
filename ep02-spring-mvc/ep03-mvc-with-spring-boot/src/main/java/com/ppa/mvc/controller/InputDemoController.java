@@ -26,4 +26,8 @@ public class InputDemoController {
 		model.put("date", date);
 		return "inputs/view1";
 	}
+	@GetMapping("/get/form")
+	String javaBean() {
+		return "inputs/view2";
+	}
 }

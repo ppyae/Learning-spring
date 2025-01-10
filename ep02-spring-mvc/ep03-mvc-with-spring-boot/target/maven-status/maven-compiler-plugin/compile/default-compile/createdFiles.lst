@@ -1,0 +1,6 @@
+com\ppa\mvc\WebApplication.class
+com\ppa\mvc\WebApplicationMvcConfig.class
+com\ppa\mvc\controller\InputDemoController.class
+com\ppa\mvc\controller\ReturnTypeController.class
+com\ppa\mvc\WebApplicationInitilizer.class
+com\ppa\mvc\controller\input\JavaBean.class

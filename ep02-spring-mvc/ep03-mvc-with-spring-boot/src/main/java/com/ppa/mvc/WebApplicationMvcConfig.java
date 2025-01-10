@@ -11,5 +11,6 @@ public class WebApplicationMvcConfig implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("home");
 		registry.addRedirectViewController("/returns", "/returns/handler1");
+		registry.addViewController("/inputs/javaBean").setViewName("/inputs/view2");
 	}
 }
