@@ -26,8 +26,17 @@ public class InputDemoController {
 		model.put("date", date);
 		return "inputs/view1";
 	}
+	
+	//URL Get/inputs/javaBean
+	@GetMapping("javaBean")
+	String loadjavaBean(ModelMap model) {
+		model.put("days", DayOfWeek.values());
+		return "inputs/view2";
+	}
+	
+	//URL Get/inputs/get/form
 	@GetMapping("/get/form")
 	String javaBean() {
-		return "inputs/view2";
+		return "inputs/view1";
 	}
 }
