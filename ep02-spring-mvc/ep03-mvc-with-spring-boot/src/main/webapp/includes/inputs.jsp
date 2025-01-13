@@ -15,9 +15,9 @@
 		<a href="${root}/inputs/javaBean" class="nav-link">Get Form Param</a>
 	</li>
 	<li class="nav-item">
-		<a href="" class="nav-link">Post Form Param</a>
+		<a href="${root}/inputs/record" class="nav-link">Post Form Param</a>
 	</li>
 	<li class="nav-item">
-		<a href="" class="nav-link">Path Variable</a>
+		<a href="${root}/inputs/path/101" class="nav-link">Path Variable</a>
 	</li>
 </ul>

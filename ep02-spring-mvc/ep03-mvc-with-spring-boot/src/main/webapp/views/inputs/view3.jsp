@@ -7,9 +7,9 @@
 		<h4>Input Params</h4>
 		
 		<app:sidebar menu="inputs.jsp">
-			<h1>Get Form</h1>
+			<h1>Post Form</h1>
 			
-			<form action="${root}/inputs/get/form" class="w-50">
+			<form action="${root}/inputs" method="post" class="w-50">
 				<app:form-group label="Day of Week" cssClass="mb-3">
 					<select name="day"  class="form-select">
 						<option value="">Select One</option>
