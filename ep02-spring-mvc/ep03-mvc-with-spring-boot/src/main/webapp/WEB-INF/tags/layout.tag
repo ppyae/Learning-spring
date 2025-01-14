@@ -25,6 +25,9 @@
 		<div class="container">
 			<span class="navbar-brand">Request Handler</span>
 			<ul class="navbar-nav">
+			<li class="nav-item">
+					<a href="${root}/valitation" class="nav-link">Form Valitation</a>
+				</li>
 				<li class="nav-item">
 					<a href="${root}/inputs" class="nav-link">Input Value</a>
 				</li>
