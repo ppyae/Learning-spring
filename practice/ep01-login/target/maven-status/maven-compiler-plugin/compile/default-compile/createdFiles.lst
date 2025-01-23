@@ -1,0 +1,6 @@
+com\ppa\app\AppInitializer.class
+com\ppa\app\model\repo\UserRepo.class
+com\ppa\app\model\entity\User.class
+com\ppa\app\AppMvcConfig.class
+com\ppa\app\AppRootConfig.class
+com\ppa\app\controller\HomeController.class
